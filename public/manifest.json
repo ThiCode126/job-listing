@@ -1,0 +1,15 @@
+{
+  "short_name": "Job listings with filtering",
+  "name": "Job listings with filtering || FrontEnd Mentor Challenge || ThiCode",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "type": "image/png",
+      "sizes": "32x32"
+  }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#0e0e10"
+}

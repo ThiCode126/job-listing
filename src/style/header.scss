@@ -1,0 +1,18 @@
+body {
+  header {
+    background: var(--dark-green) no-repeat top url("../../public/assets/bg-header-mobile.svg");
+    height: 156px;
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  body {
+    header {
+      background: var(--dark-green) no-repeat top url("../../public/assets/bg-header-desktop.svg");
+      height: 156px;
+    }
+  }
+}
