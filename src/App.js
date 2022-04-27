@@ -5,7 +5,7 @@ import { data } from "./utils/data";
 function App() {
 
   const [dataToDisplay, setDataToDisplay] = useState(data);
-  const [filterArr, setFilterArr] = useState(["Frontend", "CSS", "JavaScript"]);
+  const [filterArr, setFilterArr] = useState([]);
 
   useEffect(() => {
     if (filterArr.length > 0) {
