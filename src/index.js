@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "@fontsource/spartan";
+import "@fontsource/spartan/700.css";
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

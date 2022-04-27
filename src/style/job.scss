@@ -1,0 +1,154 @@
+#job {
+  padding-top: 32px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .card {
+    background-color: var(--white);
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+    border-left: 5px solid var(--white);
+    @include pX(19px, 24px);
+    &.featured {
+      border-left-color: var(--dark-green);
+    }
+
+    .card__body {
+      margin-top: -24px;
+      border-bottom: 1px solid var(--grey);
+      img {
+        @include wh(48px);
+      }
+      .in-body {
+        @include pY(8px, 15px);
+        .data {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          span.company {
+            font-weight: 700;
+            @include text(13px, 15px);
+            color: var(--dark-green);
+            margin-right: 8px;
+          }
+          span:where(.new, .featured) {
+            text-transform: uppercase;
+            @include flexCenter;
+            @include text(11px, 14px, -0.0846154px);
+            height: 24px;
+            font-weight: 700;
+            border-radius: 12px;
+            color: var(--white);
+          }
+          span.new {
+            background-color: var(--dark-green);
+            width: 51px;
+          }
+          span.featured {
+            background-color: var(--dark);
+            width: 79px;
+          }
+        }
+        h2 {
+          @include mY(8px);
+          font-weight: 700;
+          @include text(15px, 24px);
+          color: var(--dark);
+        }
+        .more-info {
+          span {
+            color: var(--grey-green);
+            @include text(13px, 24px, -0.1px);
+
+            &:nth-child(2) {
+              @include mX(20px);
+              position: relative;
+              &::after,
+              &::before {
+                position: absolute;
+                content: "";
+                @include wh(4px);
+                background-color: var(--grey);
+                border-radius: 50%;
+                top: 4px;
+              }
+              &::after {
+                right: -12px;
+              }
+              &::before {
+                left: -12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card__footer {
+      @include pY(16px, 24px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      div {
+        cursor: pointer;
+        background-color: var(--dark-green-01);
+        color: var(--dark-green);
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-weight: 700;
+        @include text(13px, 24px, -0.1px);
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #job {
+    padding-top: 40px;
+    margin-bottom: 120px;
+    gap: 24px;
+    .card {
+      padding: 32px 40px;
+      @include flexSpaceBetween;
+      .card__body {
+        margin-top: 0;
+        border-bottom: none;
+        display: flex;
+        gap: 24px;
+
+        img {
+          @include wh(88px);
+        }
+        .in-body {
+          @include pY(0);
+          .data {
+            span.company {
+              @include text(14px, 16px);
+            }
+          }
+          h2 {
+            @include text(18px, 24px);
+          }
+          .more-info {
+            height: 24px;
+            span {
+              @include text(15px, 24px, -0.115385px);
+
+              &:nth-child(2) {
+                @include mX(36px);
+              }
+            }
+          }
+        }
+      }
+
+      .card__footer {
+        @include pY(0);
+      }
+    }
+  }
+}

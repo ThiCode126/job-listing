@@ -1,10 +1,12 @@
 :root {
   --white: #fff;
+  --dark: #2b3939;
   --white-green: #effafa;
   --very-dark-green: #2b3939;
   --dark-green: #5ca5a5;
   --dark-green-01: #5ca5a519;
   --grey-green: #7c8f8f;
+  --grey: #b7c4c4;
 }
 
 @mixin text($font, $line: $font, $ls: normal) {
